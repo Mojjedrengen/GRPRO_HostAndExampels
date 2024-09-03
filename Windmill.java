@@ -14,16 +14,29 @@ public class Windmill
         int currPoss = s.nextInt();
         int targetPoss = s.nextInt();
         
-        int temp = targetPoss - currPoss;
+        int temp = 0;
         
-        if (temp > 180) {
-           temp = 360 - temp; 
-           System.out.println("temp > 180");
-        } else if (temp < -180){
-            temp = 180 + temp;
-            System.out.println("temp < -180");
+        if (currPoss < targetPoss){
+            if ((targetPoss - currPoss) <= 180){
+                temp = (targetPoss - currPoss) % 360;
+            } else {
+                temp = (targetPoss - currPoss) % -360;
+                if (temp > 0) {
+                    temp -= 360;
+                }
+            }
+        } else if (currPoss > targetPoss) {
+            if ((currPoss - targetPoss) < 180) {
+                temp = (targetPoss - currPoss) % -360;
+            } else {
+                temp = (targetPoss - currPoss) % 360;
+                if (temp < 0) {
+                    temp += 360;
+                }
+            }
         }
         
         System.out.println(temp);
+        
     }
 }
