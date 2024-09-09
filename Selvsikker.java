@@ -15,28 +15,13 @@ public class Selvsikker
         inputArr[0] = inputArr[1];
         inputArr[1] = temp;
         
-        char iToUpper = upper(inputArr[0].charAt(0));
-        char iToLower = lower(inputArr[1].charAt(0));
         
-        System.out.println(iToUpper+" "+iToLower);
-        
-        // Replace the new chars
+        inputArr[0] = inputArr[0].substring(0, 1).toUpperCase() + inputArr[0].substring(1);
+        inputArr[1] = inputArr[1].substring(0, 1).toLowerCase() + inputArr[1].substring(1);
         
         String out = String.join(" ", inputArr);
         
         System.out.println(out);
-    }
-    
-    private static char upper(char _char) 
-    {
-        int charInt = _char - 32;
-        return (char)charInt;
-    }
-    
-    private static char lower(char _char) 
-    {
-        int charInt = _char + 32;
-        return (char)charInt;
     }
 }
 
