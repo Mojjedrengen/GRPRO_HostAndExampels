@@ -8,18 +8,12 @@ public class QuickEstimates
         int N = s.nextInt();
         
         int[] cost = new int[N];
+        String frowaway = s.nextLine();
         
-        for (int i = 0; i < cost.length; i++)
+        for (int i = 0; i < N; i++)
         {
-            double temp = s.nextInt();
-            if (temp == 0)
-            {
-                cost[i] = 1;
-            } else
-            {
-                temp = Math.log10(temp);
-                cost[i] = (int)Math.floor(temp)+1;
-            }
+            String temp = s.nextLine();
+            cost[i] = temp.length();
         }
         for (int estimet : cost)
         {
