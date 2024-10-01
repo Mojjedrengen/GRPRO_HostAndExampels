@@ -11,31 +11,31 @@ import java.util.Set;
 
 public class Course
 {
-   private Set<Student> students;
+   private Set<Student19> students;
    
    public Course() {
-       this.students = new HashSet<Student>();
+       this.students = new HashSet<Student19>();
    }
-   public Course(Student[] students) {
-       this.students = new HashSet<Student>();
-       for (Student student : students) {
+   public Course(Student19[] students) {
+       this.students = new HashSet<Student19>();
+       for (Student19 student : students) {
            this.students.add(student);
        }
    }
    
-   public void addStudent(Student student) {
+   public void addStudent19(Student19 student) {
        this.students.add(student);
    }
-   public void addStudents(Student[] students)
+   public void addStudent19s(Student19[] students)
    {
-       for (Student student : students) {
+       for (Student19 student : students) {
            this.students.add(student);
        }
    }
    
-   public void showStudents() {
+   public void showStudent19s() {
        System.out.println("Antal studerende: "+this.students.size());
-       for (Student student : this.students) {
+       for (Student19 student : this.students) {
            System.out.print("- ");
            student.display();
        }

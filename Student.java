@@ -1,25 +1,17 @@
-
-/**
- * Write a description of class Student here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Student
-{
-    private String name;
-    private int age;
+public class Student extends Person {
+    private boolean sps;
     
-    public Student (String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Student(String name, int age, boolean sps) {
+        super(name, age);
+        this.sps = sps;
     }
     
-    public void birthday() {
-        this.age++;
+    public boolean getSps() {
+        return sps;
     }
-    
-    public void display() {
-        System.out.println(this.name+" ("+this.age+")");
+        
+    @Override public void display() {
+        super.display();
+        System.out.println(" [sps: " + sps + "]");
     }
 }

@@ -19,7 +19,7 @@ public class sep19
     }
     
     public static void studentTest() {
-        Student student = new Student("Børge", 35);
+        Student19 student = new Student19("Børge", 35);
         student.display();
         student.birthday();
         student.display();
@@ -28,11 +28,11 @@ public class sep19
     public static void courseTest() {
         Course course = new Course();
         
-        course.addStudent(new Student("Jens Jensen", 20));
-        course.addStudent(new Student("Børge Bo Larsen", 19));
-        course.addStudent(new Student("Ib Ibsen", 20));
+        course.addStudent19(new Student19("Jens Jensen", 20));
+        course.addStudent19(new Student19("Børge Bo Larsen", 19));
+        course.addStudent19(new Student19("Ib Ibsen", 20));
         
-        course.showStudents();
+        course.showStudent19s();
     }
 }
 
