@@ -46,5 +46,8 @@ public class Flest
         }
     }
 }
-
-
+/*Notes: 
+latte espresso latte
+Bliver til Latte
+Lav ekstra HashMap;
+*/
