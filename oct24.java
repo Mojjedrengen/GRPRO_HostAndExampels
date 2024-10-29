@@ -64,4 +64,19 @@ public class oct24
             System.out.println("Please enter legal amount");
         }
     }
+    
+    private static void makeWithdrawal(Account24Oct a, int amount) throws InsufficientFundsException {
+        a.withdraw(amount);
+    }
+    
+    public static void testAccount3() {
+        Account24Oct acount = new Account24Oct("Hej");
+        makeDeposit(acount, 5);
+        try {
+            makeWithdrawal(acount, 10);
+        } catch (InsufficientFundsException e) {
+            System.out.println("Error: " + e.getMessage());
+            System.out.println("Diff: " + e.getDifference());
+        }
+    }
 }

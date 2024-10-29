@@ -21,7 +21,8 @@ public class Account24Oct
        balance += amount;
    }
    
-   void withdraw(int amount) {
+   void withdraw(int amount) throws InsufficientFundsException {
+       if (balance - amount < 0) throw new InsufficientFundsException(balance - amount);
        balance -= amount;
    }
    
